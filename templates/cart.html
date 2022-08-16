@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Cart</title>
+</head>
+<body>
+{% csrf_token %}
+{{ context }}
+{% load static %}
+<div class=”Cart-Container”></div>
+<div class=”Header”>
+ <h3 class=”Heading”>Shopping Cart</h3>
+ <h5 class=”Action”>Remove all</h5>
+ <div class=”Cart-Items”>
+ <div class=”image-box”>
+ <img src=”images/kurta.png” style= { height=”120px” } />
+ </div>
+ <div class=”about”>
+ <h1 class=”title”>Kurta</h1>
+ <h3 class=”subtitle”>1000rs</h3>
+ </div>
+ <div class=”counter”></div>
+ <div class=”prices”></div>
+ </div>
+ <div class=”counter”>
+ <div class=”btn”>+</div>
+ <div class=”count”>2</div>
+ <div class=”btn”>-</div>
+ </div>
+ <div class=”prices”>
+ <div class=”amount”>500rs</div>
+ <div class=”save”><u>Save for later</u></div>
+ <div class=”remove”><u>Remove</u></div>
+ </div>
+ <hr>
+ <div class=”checkout”>
+ <div class=”total”>
+ <div>
+ <div class=”Subtotal”>Sub-Total</div>
+ <div class=”items”>2 items</div>
+ </div>
+ <div class=”total-amount”>1000rs</div>
+ </div>
+ <button class=”button”>Checkout</button>
+ </div>
+
+ </div>
+</body>
+</html>

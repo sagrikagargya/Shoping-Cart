@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<style>
+{
+  background-color: green;
+}
+
+h1 {
+  color: maroon;
+  margin-left: 40px;
+}
+</style>
+ {%extends 'base.html'%}
+ {%block content%}
+
+
+<div align="right"><a href="register/">Register</a></div>
+<div align="right"><a href="/products">Add details of product</a></div>
+<div align="right"><a href="/cart">cart</a></div>
+<div align="left"><a href="signin/">Signin</a></div>
+<div align="left"><a href="/feedback">Feedback</a></div>
+<div align="left"><a href="/signout">Signout</a></div>
+
+<h1>My Shopping Site</h1>
+<marquee bgcolor="red"><B>Sale 50%</marquee>
+<div class="row">{% for pdts in pdt%}
+    <div class="col">
+        <div class="card" style="width: 18rem;">
+            <img src="{{pdts.img}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h3 class="card-title">{{pdts.pname}}</h3>
+                <p class="card-text">{{pdts.description}}</p>
+                <p class="card-text">Rs{{pdts.cost}}</p>
+                <p class="card-text">{{pdts.discount}}</p>
+                <a href="#" class="btn btn-primary">Add To Cart</a>
+            </div>
+        </div>
+    </div>
+{% endfor%}
+</div>
+
+
+{%endblock%}

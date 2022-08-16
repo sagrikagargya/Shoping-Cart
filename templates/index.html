@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+{
+  background-color: green;
+}
+
+h2 {
+  color: maroon;
+  margin-left: 40px;
+}
+</style>
+    <title>Index page</title></head>
+<body>
+{% load static %}
+<img  src="{% static 'images\\img.png' %}" height="20%" width="100%">
+<marquee bgcolor="red"><B>Sale 50%</marquee>
+<form method="post">
+    {%csrf_token%}
+    <h2 fontcolor="blue" align="center">Enter Details</h2>
+    <h3><center><font color="red" >{{msg}}</font></center></h3>
+    <table align="center" height="100%" bgcolor="yellow" >
+        <tr height="100px"><td>Product name:</td><td>{{form.pname}}</td></tr>
+        <tr><td>cost:</td><td>{{form.cost}}</td></tr>
+        <tr><td>Description:</td><td>{{form.description}}</td></tr>
+        <tr><td>Discount:</td><td>{{form.discount}}</td></tr>
+        <tr><td>Image_url:</td><td>{{form.img}}</td></tr>
+        <tr><td colspan="2" align="center"><button type="submit">ADD DETAILS</button></td></tr>
+    </table>
+</form>
+</body>
+
+
+
+
+
+</html>

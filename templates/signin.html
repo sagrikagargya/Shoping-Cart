@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static  %}
+    <meta charset="UTF-8">
+    <title>Sign In</title>
+  <img  src="{% static 'images\\img_1.png' %}" height="50%" width="100%">
+
+  <marquee bgcolor="red"><B>Sale 50%</marquee>
+  <form method="post">
+    {% csrf_token %}
+    {{ context }}
+
+  <div class="imgcontainer">
+    <img src="img_avatar2.png" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="containers">
+    <label for="username"><b>username</b></label>
+    <input type="text" placeholder=" For username" name="username" id="username"crequired>
+
+    <label for="password"><b>password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" id="password"required>
+
+    <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="containers" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+</form>
+</head>
+<body>
+
+</body>
+</html>
